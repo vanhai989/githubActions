@@ -1,9 +1,19 @@
-name: "hello world"
+name: macOS Workflow
+
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+
 jobs:
-  say-hello:
-    run-on: mac-latest
+  build:
+    runs-on: macos-latest
+
     steps:
-      - run: echo Hello world, today is a good day
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Run a script on macOS
+        run: |
+          echo "Hello, macOS!"
+          # You can add your own shell commands or scripts here
