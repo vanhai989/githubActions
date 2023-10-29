@@ -1,0 +1,9 @@
+name: "hello world"
+on:
+  push:
+    branches: [main]
+jobs:
+  say-hello:
+    run-on: mac-latest
+    steps:
+      - run: echo Hello world 
