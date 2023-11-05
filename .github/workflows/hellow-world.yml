@@ -19,6 +19,9 @@ jobs:
   build:
     runs-on: macos-latest
     steps:
-      - uses: dessant/label-actions@v3
+      - uses: mheap/github-action-required-labels@v5
         with:
-          process-only: 'prs, discussions'
+          mode: exactly
+          count: 0
+          labels: "do_no_build"
+      - run: echo HELLO WORLD
