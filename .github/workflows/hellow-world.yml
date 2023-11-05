@@ -19,5 +19,9 @@ jobs:
   build:
     runs-on: macos-latest
     steps:
-      - run: echo hello world
-      
+      - uses: mheap/github-action-required-labels@v5
+        with:
+          mode: exactly
+          count: 0
+          labels: "do not build"
+      - run: echo HELLO WORLD
