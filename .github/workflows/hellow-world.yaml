@@ -18,9 +18,9 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: Check out code
-        - uses: dessant/label-actions@v3
-          with:
-            process-only: 'RUN_CI_CD'
+      - uses: dessant/label-actions@v3
+        with:
+          process-only: 'RUN_CI_CD'
       - name: Run a script on macOS
         run: |
           echo "Hello, macOS!"
