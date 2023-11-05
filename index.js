@@ -1,1 +1,1 @@
-console.log('init js 1 ');
+console.log('init js 2 ');
