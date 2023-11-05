@@ -6,16 +6,21 @@ on:
       - "!README.md"
       - "**/.js"
     branches:
-      - main
-
+      - "main"
+      - "!dev"
+      - "!fixbug/**"
+      - "!fixbug/**"
+  pull_request: 
+    type: "[opened, reopened, synchronize, labeled, unlabeled]"
+  workflow_dispatch:
 jobs:
   build:
     runs-on: macos-latest
-
     steps:
       - name: Check out code
-        uses: actions/checkout@v3
-
+        - uses: dessant/label-actions@v3
+          with:
+            process-only: 'RUN_CI_CD'
       - name: Run a script on macOS
         run: |
           echo "Hello, macOS!"
