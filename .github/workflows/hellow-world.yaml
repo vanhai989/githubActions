@@ -1,6 +1,8 @@
 name: macOS Workflow
 
 on:
+  issues:
+    types: labeled
   push:
     paths: 
       - "!README.md"
@@ -19,4 +21,4 @@ jobs:
     steps:
       - uses: dessant/label-actions@v3
         with:
-          process-only: 'RUN_CI_CD'
+          process-only: 'prs, discussions'
