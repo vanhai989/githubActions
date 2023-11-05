@@ -1,1 +1,1 @@
-console.log('init js 6 ');
+console.log('init js 7 ');
