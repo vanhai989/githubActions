@@ -1,1 +1,1 @@
-console.log('init js 8 ');
+console.log('init js 9 ');

@@ -23,5 +23,5 @@ jobs:
         with:
           mode: exactly
           count: 0
-          labels: "do not build"
+          labels: "do_no_build"
       - run: echo HELLO WORLD
